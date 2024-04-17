@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> Hola mundo </title>
+  </head>
+  <body>
+    <h2>Hola {{username}}</h2>
+    <h3>Te encuentras en el curso {{course_name}}</h3>
+    {% if is_premium %}
+    
+    <p>El curso es Premium</p>
+    {%else%}
+    
+    <p>El curso es gratuito para todo el word!</p>
+    {%endif%}
+
+    {% if courses %}
+    <p>Listado de cursos disponibles:</p>
+    <ul>
+      {% for course in courses %}
+         <li>{{course}}</li>
+      {%endfor%}
+
+    </ul>
+    {% endif%}
+
+  </body>
+</html>
