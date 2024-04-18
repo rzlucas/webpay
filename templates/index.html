@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title> Hola mundo </title>
-  </head>
-  <body>
+{% extends'base.html' %}
+{% block content %}
+
     <h2>Hola {{username}}</h2>
     <h3>Te encuentras en el curso {{course_name}}</h3>
     {% if is_premium %}
@@ -23,7 +19,7 @@
       {%endfor%}
 
     </ul>
+
     {% endif%}
 
-  </body>
-</html>
+{% endblock %}
