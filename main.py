@@ -20,6 +20,11 @@ def datos():
     nombre=request.args.get('nombre') #Dicc
     curso = request.args.get('curso','')
     return 'Listado de datos '+ nombre + ' ' + curso
+
+@app.route('/about')
+def about():
+    return  render_template ('about.html')
+
     
 
 
