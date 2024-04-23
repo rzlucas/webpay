@@ -3,6 +3,18 @@ from flask import render_template, request
 
 app=Flask(__name__)
 
+#Callback
+@app.before_request
+def before_request():
+    print('Antes de la petición')
+
+@app.route('/about')
+def about():
+    print('Estamos en el about')
+    return render_template ('about.html')
+
+
+
 @app.route('/')
 def index():
     name='Lucas Rodriguez'
