@@ -13,6 +13,12 @@ def about():
     print('Estamos en el about')
     return render_template ('about.html')
 
+@app.after_request
+def afte_request(response):
+    print('Después de la petición')
+    return response
+
+
 
 @app.route('/')
 def index():

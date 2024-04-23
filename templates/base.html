@@ -5,13 +5,18 @@
         <title></title>
     </head>
     <body>
+        <a href="{{ url_for ('index') }}">Index</a>
+        <a href="{{ url_for ('about') }}"·>About</a>
+        
         <h1>Mensaje de archivo base </h1>
+        
         {% block content %}
         {% endblock %}
 
+        
+        
         {% block footer %}
         <footer><center><p>Pie de página</p></center></footer>
-
         {% endblock %}
 
 
